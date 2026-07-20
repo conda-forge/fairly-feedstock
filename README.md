@@ -13,7 +13,7 @@ Development: https://github.com/ITC-CRIB/fairly
 
 Documentation: https://fairly.readthedocs.io
 
-Python package and CLI of the fairly toolset. It provides functionality for the core tasks of preparing, uploading and downloading datasets from research data repositories. The toolset currently provides integration with data repositories based on Invenio and Figshare.
+Python package and CLI of the fairly toolset. It provides functionality for the core tasks of preparing, uploading and downloading datasets from research data repositories. The toolset currently provides integration with data repositories based on Invenio and Figshare..
 
 
 Current build status
