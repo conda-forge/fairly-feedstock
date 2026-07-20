@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fairly-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fairly-{{ version }}.tar.gz
   sha256: d93b187f72215a059774134fcf862d51f9f5da687e8f058d208c1d87aa330e05
 
 build:
@@ -14,15 +14,15 @@ build:
     - fairly = fairly.cli:app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - hatch
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - python-dateutil
     - requests
     - requests-toolbelt >=1.0.0
@@ -35,6 +35,7 @@ test:
     - fairly
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
     - fairly --help
