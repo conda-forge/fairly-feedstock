@@ -14,21 +14,20 @@ build:
     - fairly = fairly.cli:app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
     - python {{ python_min }}
-    - hatch
+    - hatchling
     - pip
   run:
     - python >={{ python_min }}
     - python-dateutil
     - requests
-    - requests-toolbelt >=1.0.0
-    - ruamel.yaml >=0.17.26
-    - typer >=0.9.0
-    - rich
+    - requests-toolbelt 
+    - ruamel.yaml 
+    - click
 
 test:
   imports:
