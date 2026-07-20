@@ -1,13 +1,13 @@
 {% set name = "fairly" %}
-{% set version = "1.0.1" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fairly-{{ version }}.tar.gz
-  sha256: d93b187f72215a059774134fcf862d51f9f5da687e8f058d208c1d87aa330e05
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fairly-{{ version }}.tar.gz
+  sha256: 0292751299ea1038bfafa524873cab4a8b3dc712829e4e09c5047abec846d535
 
 build:
   entry_points:
